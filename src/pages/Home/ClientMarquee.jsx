@@ -7,13 +7,13 @@ const ClientMarquee = () => {
   return (
     <div className="my-5">
       <Marquee gradient gradientWidth={300}>
-        <div className="flex gap-12 justify-evenly items-center">
-          <img src={nel}></img>
-          <img src={partexStar}></img>
-          <img src={danishFoods}></img>
-          <img src={kurmure}></img>
-          <img src={partexStar}></img>
-          <div className="text-6xl uppercase px-10">Nature&apos;s Dew</div>
+        <div className="flex gap-4 md:gap-6 justify-evenly items-center h-[60px] md:h-[150px]">
+          <img className="max-h-10 md:max-h-32"  src={nel}></img>
+          <img className="max-h-10 md:max-h-32" src={kurmure}></img>
+          <img className="max-h-10 md:max-h-32" src={danishFoods}></img>
+          <img className="max-h-10 md:max-h-32" src={kurmure}></img>
+          <img className="max-h-10 md:max-h-32" src={partexStar}></img>
+          <div className="text-xl md:text-4xl text-center uppercase leading-5">Nature&apos;s<br></br>Dew</div>
         </div>
       </Marquee>
     </div>

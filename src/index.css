@@ -8,3 +8,24 @@
 html, body, label {
   font-family: 'Roboto', sans-serif;
 }
+
+
+.sticky-header {
+  background-color: #333;
+  color: #00acef;
+  padding: 10px;
+  text-align: center;
+  z-index: 1000;
+  width: 100%;
+  margin: 0 auto;
+  transition: background-color 0.3s ease, padding 0.3s ease; /* Add transition property */
+}
+
+.sticky-header.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333; /* Ensure background-color matches sticky-header */
+  padding: 10px; /* Ensure padding matches sticky-header */
+  margin: 0 auto;
+}

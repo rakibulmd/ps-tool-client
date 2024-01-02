@@ -8,6 +8,11 @@ const Home = () => {
             <Header></Header>
             <HeroSection></HeroSection>
             <ClientMarquee></ClientMarquee>
+            <ClientMarquee></ClientMarquee>
+            <ClientMarquee></ClientMarquee>
+            <ClientMarquee></ClientMarquee>
+            <ClientMarquee></ClientMarquee>
+            {/* <ClientMarquee></ClientMarquee> */}
         </>
     );
 };
