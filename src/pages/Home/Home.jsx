@@ -1,6 +1,7 @@
 import Header from "../../Common/Header";
 import ClientMarquee from "./ClientMarquee";
 import HeroSection from "./HeroSection";
+import Solutions from "./Solutions";
 
 const Home = () => {
     return (
@@ -8,11 +9,7 @@ const Home = () => {
             <Header></Header>
             <HeroSection></HeroSection>
             <ClientMarquee></ClientMarquee>
-            <ClientMarquee></ClientMarquee>
-            <ClientMarquee></ClientMarquee>
-            <ClientMarquee></ClientMarquee>
-            <ClientMarquee></ClientMarquee>
-            {/* <ClientMarquee></ClientMarquee> */}
+            <Solutions></Solutions>
         </>
     );
 };
