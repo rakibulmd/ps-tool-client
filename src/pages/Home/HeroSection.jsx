@@ -2,9 +2,10 @@
 // import HeroBg from "../../assets/heroBg.png";
 import { Button } from "@material-tailwind/react";
 import HeroPrinters from "../../assets/heroPrinters.png"
+import heroBg from "../../assets/heroBg.png"
 const HeroSection = () => {
   return (
-    <div className="w-full bg-[#00acef] min-h-[600px] hero-section bg-cover cursor-default rounded-b-[30px]" style={{ backgroundImage: "url('../src/assets/heroBg.png')" }}>
+    <div className="w-full bg-[#00acef] min-h-[600px] hero-section bg-cover cursor-default rounded-b-[30px]" style={{ backgroundImage: `url(${heroBg})` }}>
       <div className="container mx-auto pt-10 lg:pt-[90px]">
         <div className="md:flex justify-between">
           <div className="md:w-1/2 order-2">

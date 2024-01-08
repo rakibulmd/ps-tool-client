@@ -10,7 +10,7 @@ const Solutions = () => {
   const ourSolutions = [
     {
       img: printer,
-      headline: "Ink Jet Printer Sales",
+      headline: "High Performance Ink-Jet Printer",
       description:
         "We sell High Performance CIJ Ink-Jet Printer Machines originated from Germany, Korea and China",
     },
@@ -20,7 +20,7 @@ const Solutions = () => {
         description: "We do preventive and corrective maintenance of all Ink Jet Printer Machines."
     },
       {img: inks,
-      headline: "Ink and Material Sales",
+      headline: "Ink and Printing Materials",
       description:
         "We sell all different color, different types of ink, solvent and wash solution for Ink Jet Machines.",
     },
@@ -37,13 +37,13 @@ const Solutions = () => {
     {
         img: conveyor,
         headline: "Conveyor, Rewinder and Related Products.",
-        description: "Please contact us for your trial unit. We always look forward to work with ambitious clients."
+        description: "We provide all kinds of marking and batch coding related products including conveyor, rewinder, cable rollers etc."
     },
   ];
   return (
     <div className="w-full bg-[#00acef] cursor-default">
-      <div className="container mx-auto pt-8">
-        <h5 className="text-center text-lg md:text-3xl lg:text-6xl my-5 pb-8 font-light text-white uppercase tracking-wider">Our Solutions</h5>
+      <div className="container mx-auto py-8">
+        <h5 className="text-center text-2xl md:text-3xl lg:text-6xl pb-5 lg:my-5 lg:pb-8 font-light text-white uppercase tracking-wider">Our Solutions</h5>
         <div className="flex justify-evenly flex-wrap gap-8">
           {ourSolutions?.map((s, i) => (
             <SolutionCard

@@ -9,7 +9,7 @@ const ClientMarquee = () => {
   return (
     <div className="my-5">
       <h5 className="text-xl md:text-2xl lg:text-5xl text-center py-4">We&apos;ve provided solutions to</h5>
-      <Marquee gradient gradientWidth={300}>
+      <Marquee gradient gradientWidth={100}>
         <div className="flex gap-4 md:gap-6 justify-evenly items-center h-[60px] md:h-[150px]">
           <img className="max-h-10 md:max-h-32"  src={nel}></img>
           <img className="max-h-10 md:max-h-32" src={kurmure}></img>
