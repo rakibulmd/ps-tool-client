@@ -1,9 +1,12 @@
-import { useState } from "react";
+import {useState } from "react";
 import psLogo from "../assets/ps-logo.png";
 import { useEffect } from "react";
 import { Button } from "@material-tailwind/react";
+import { useNavigate } from "react-router-dom";
 
-const Header = () => {
+// eslint-disable-next-line react/prop-types
+const Header = ({solutionScrollRef}) => {
+  const navigate = useNavigate();
   const [logoVisible, setLogoVisible] = useState(true);
   const [navbarSticky, setNavbarSticky] = useState(false);
 
@@ -11,10 +14,27 @@ const Header = () => {
     console.log("hello");
   }
 
+  const handleLoginBtnClick = () => {
+    navigate("/login");
+  }
+
   const listenScrollEvent = () => {
     window.scrollY > 0 ? setLogoVisible(false) : setLogoVisible(true);
     window.scrollY > 0 ? setNavbarSticky(true) : setNavbarSticky(false);
   };
+
+  const scrollToSection = (ref, offset) => {
+    const element = ref.current;
+    console.log("scroll");
+    if (element) {
+      const topPos = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: topPos - offset,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
     return () => {
@@ -41,11 +61,11 @@ const Header = () => {
             <h5 className="text-xl uppercase font-semibold tracking-wider">Printing Solution</h5>
           </div>
           <div className="flex justify-evenly gap-4 text-xl font-light cursor-pointer items-center transition-all duration-200">
-            <a className="hover:text-[#9de3ff] transition-all duration-200">Solutions</a>
+            <a  onClick={()=> scrollToSection(solutionScrollRef, 100)} className="hover:text-[#9de3ff] transition-all duration-200">Solutions</a>
             <a className="">Printers</a>
             <a>About</a>
             <a>Contact</a>
-            <Button color="white">Login</Button>
+            <Button color="white" onClick={handleLoginBtnClick} >Login</Button>
           </div>
         </nav>
 
@@ -60,11 +80,11 @@ const Header = () => {
             <h5 className="text-sm uppercase font-semibold tracking-wider">Printing Solution</h5>
           </div>
           <div className="flex justify-evenly gap-2 text-sm md:text-md font-light cursor-pointer items-center">
-            <a className="">Solutions</a>
+            <a onClick={()=> scrollToSection(solutionScrollRef, 80)} className="">Solutions</a>
             <a className="">Printers</a>
             <a>About</a>
             <a>Contact</a>
-            <Button color="white" size="sm">Login</Button>
+            <Button color="white" size="sm" onClick={handleLoginBtnClick} >Login</Button>
           </div>
         </nav>
       </div>

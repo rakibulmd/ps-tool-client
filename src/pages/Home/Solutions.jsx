@@ -6,7 +6,8 @@ import conveyor from "../../assets/conveyor.jpeg";
 import service from "../../assets/service.jpg";
 import solution from "../../assets/tailored_solution.jpg";
 
-const Solutions = () => {
+// eslint-disable-next-line react/prop-types
+const Solutions = ({solutionScrollRef}) => {
   const ourSolutions = [
     {
       img: printer,
@@ -41,10 +42,10 @@ const Solutions = () => {
     },
   ];
   return (
-    <div className="w-full bg-[#00acef] cursor-default">
+    <div ref={solutionScrollRef} className="w-full bg-[#00acef] cursor-default" id="solution">
       <div className="container mx-auto py-8">
         <h5 className="text-center text-2xl md:text-3xl lg:text-6xl pb-5 lg:my-5 lg:pb-8 font-light text-white uppercase tracking-wider">Our Solutions</h5>
-        <div className="flex justify-evenly flex-wrap gap-8">
+        <div className="flex justify-evenly flex-wrap gap-4 gap-y-9">
           {ourSolutions?.map((s, i) => (
             <SolutionCard
               img={s.img}
