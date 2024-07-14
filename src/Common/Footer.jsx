@@ -1,4 +1,4 @@
-import pslogo from "../assets/logoFull.png";
+import pslogo from "../assets/pslogo.png";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -9,12 +9,11 @@ const Footer = () => {
           <div className="p-5">
             <img src={pslogo} className="max-w-[300px]"></img>
           </div>
-          <div className="text-lg flex gap-3 flex-col">
+          <div className="text-lg flex gap-1 flex-col">
             <p>Head office Address:</p>
-            <p>
-              (Own Building) House # 48/03, Road # 07 Block #07 Dhour, Turag, Uttara, Dhaka 1230
-            </p>
+            <p>House 92, Road 13, Sector 10, Uttara, Dhaka.</p>
             <p>Cell: 01894531110</p>
+            <p>Cell: 01894531111</p>
             <p>printingsolution2021@gmail.com</p>
           </div>
         </div>
