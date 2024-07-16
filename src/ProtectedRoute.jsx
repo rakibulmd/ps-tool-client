@@ -1,26 +1,15 @@
-import { Route, Navigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
-import PropTypes from "prop-types";
-import { auth } from "./firebaseAuth";
+import { Navigate, Outlet } from "react-router-dom";
+import { auth } from "./firebaseAuth"; // Adjust the path as needed
 
-const ProtectedRoute = ({ element, ...rest }) => {
-  const [user, loading] = useAuthState(auth);
+const ProtectedRoute = () => {
+  // const [user, loading] = useAuthState(auth);
 
-  if (loading) {
-    return <div className="flex items-center justify-center h-screen">Loading</div>;
+  if (false) {
+    return <p>Loading...</p>; // Show a loading indicator while checking auth state
   }
 
-  return (
-    <Route
-      {...rest}
-      element={user ? element : <Navigate to="/login" replace />} // Redirect to login if user not authenticated
-    />
-  );
-};
-
-ProtectedRoute.propTypes = {
-  element: PropTypes.element.isRequired,
-  rest: PropTypes.object, // Ensure rest props are objects
+  return true ? <Outlet /> : <Navigate to="/login" replace />;
 };
 
 export default ProtectedRoute;

@@ -16,7 +16,6 @@ const Login = () => {
       console.log("User info:", user);
       // Navigate to PSBook page after successful login
       navigate("/psbook");
-      throw new error();
     } catch (error) {
       console.error("Error during Google login:", error);
       // Handle errors here
@@ -38,7 +37,7 @@ const Login = () => {
           alt="Google Icon"
           className="h-6 w-6"
         />
-        Continue with Google {user.id}
+        Continue with Google
       </Button>
       {error && <p className="text-red-500 mt-2">{error.message}</p>}
     </div>
