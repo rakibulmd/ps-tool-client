@@ -15,3 +15,5 @@ dist
 # Miscellaneous
 .DS_Store
 *.suo
+# .gitignore
+.env

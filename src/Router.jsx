@@ -1,19 +1,19 @@
-import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Login from "./pages/Login/Login";
 import ErrorPage from "./pages/Error/ErrorPage";
+import { createBrowserRouter } from "react-router-dom";
+import Login from "./pages/Login/Login";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    errorElement: <ErrorPage />,
+    errorElement: <ErrorPage></ErrorPage>,
   },
   {
-    path: "/home",
-    element: <Home />,
+    path: "/login",
+    element: <Login></Login>,
+    errorElement: <div>Something went wrong with login!</div>,
   },
-  { path: "/login/", element: <Login /> },
 ]);
 
 export default router;

@@ -11,10 +11,13 @@
   },
   "dependencies": {
     "@material-tailwind/react": "^2.1.8",
+    "dotenv": "^16.4.5",
+    "firebase": "^10.12.3",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.2",
+    "react-firebase-hooks": "^5.1.1",
     "react-router-dom": "^6.21.1",
     "typeface-roboto": "^1.1.13",
     "vite-bundle-visualizer": "^1.0.0"
