@@ -13,9 +13,10 @@ const Login = () => {
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
-      console.log("User info:", user);
       // Navigate to PSBook page after successful login
-      navigate("/psbook");
+      if (user) {
+        navigate("/psbook");
+      }
     } catch (error) {
       console.error("Error during Google login:", error);
       // Handle errors here

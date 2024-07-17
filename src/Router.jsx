@@ -47,6 +47,11 @@ const router = createBrowserRouter([
             errorElement: <div>Something went wrong!</div>,
           },
           {
+            path: "machine-list",
+            element: <div>Machine list</div>,
+            errorElement: <div>Something went wrong!</div>,
+          },
+          {
             path: "billing",
             element: <div>Billling</div>,
             errorElement: <div>Something went wrong!</div>,
